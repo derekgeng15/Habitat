@@ -6,9 +6,13 @@ api = Api(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 # db.SQLAlchemy(app)
 
+
 @app.route('/')
 def home():
     return render_template('habitat.html')
 
+@app.route('/hello')
+def hello():
+    return '<h1>hello<h1>'
 if __name__ == '__main__':
     app.run(debug=True)

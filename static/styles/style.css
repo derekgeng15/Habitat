@@ -1,29 +1,64 @@
-#name{
-    padding: 15px;
+#banner{
+    padding: 20px;
+    background-color: #cbc8d1;
 }
 #habitat-name{
-    padding: 10px;
-    font-size: 150%;
+    font-size: 200%;
     text-align: center;
 }
 #user-name{
-    padding: 15px;
     text-align: center;
 }
 #tabs{
+    text-align: center; 
+
+}
+#page{
+    padding: 10px 10px;
+}
+#posts{
+    /* background-color: white; */
+    margin-left: 35px;
+    border: 1px solid black !important;
+}
+.post{
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    padding: 10px;
+    background-color: white; 
+    border: 1px solid;
+}
+.post-title{
+    font-size: 150%;
+    background-color: white !important; 
+    text-decoration: none;
     text-align: center;
+}
+#post-button{
+    margin-top: 10px;
+    margin-left: 30px;
+    background-color: rgb(43, 238, 25);
+    border: 1px solid black;
+}
+#sidebar{
+    margin-left: 30px;
+    border: 1px solid black !important;
 }
 [class*='col']{
     padding: lrem;
     background-color: #cbc8d1;
-    border: 1px solid #fff;
+    border: 0px solid #fff;
     /* color: #fff; */
     text-align: center;
 }
 [class*='con']{
+    border: 0px !important;
     padding: lrem;
     background-color: #8f8a9b;
     border: 1px solid #fff;
     /* color: #fff; */
-    text-align: center;
 }
+
+body {background: #92a8d1 !important; }
