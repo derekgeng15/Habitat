@@ -1,0 +1,29 @@
+#name{
+    padding: 15px;
+}
+#habitat-name{
+    padding: 10px;
+    font-size: 150%;
+    text-align: center;
+}
+#user-name{
+    padding: 15px;
+    text-align: center;
+}
+#tabs{
+    text-align: center;
+}
+[class*='col']{
+    padding: lrem;
+    background-color: #cbc8d1;
+    border: 1px solid #fff;
+    /* color: #fff; */
+    text-align: center;
+}
+[class*='con']{
+    padding: lrem;
+    background-color: #8f8a9b;
+    border: 1px solid #fff;
+    /* color: #fff; */
+    text-align: center;
+}
