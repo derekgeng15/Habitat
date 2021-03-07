@@ -1,4 +1,122 @@
-
+.stream
+{
+    float: left;
+    width: 1200px;
+    height: 680px;
+    border-radius: 2px; 
+    border-style: solid; 
+    border-color: black ;
+    margin: 10px; 
+    background: #fff;
+}
+.postHeaderImg
+{
+    border-radius: 50%; 
+    width: 80px; 
+    margin-left: 6px; 
+    margin-top: 12px; 
+    float: left; 
+}
+.titleOfPost h4
+{
+    margin-top: 10px;
+    font-size: 220%;
+    background-color: white !important; 
+    text-decoration: none;
+    margin-left: 20 px;
+    text-align: left;
+    color: black;
+}
+.titleOfPost h6
+{
+    font-size: 100%;
+    background-color: white !important; 
+    text-decoration: none;
+    margin-left: 15px;
+    text-align: left;
+    color: black;
+}
+.recs
+{
+    width: 500px;
+    height: 330px;
+    float: left;
+    background: #fff;
+    margin: 10px;
+    border-radius: 2px; 
+    border-style: solid; 
+    border-color: black ;
+}
+.recs h1
+{
+    margin-top: 10px;
+    font-size: 330%;
+    background-color: white !important; 
+    text-decoration: none;
+    margin-left: 20 px;
+    text-align: center;
+    color: black;
+}
+.recs h4
+{
+    margin-top: 10px;
+    font-size: 150%;
+    background-color: white !important; 
+    text-decoration: none;
+    margin-left: 25px;
+    text-align: left;
+    color: black;
+}
+.recs h6
+{
+    font-size: 100%;
+    background-color: white !important; 
+    text-decoration: none;
+    margin-left: 25px;
+    text-align: left;
+    color: black;
+}
+.history
+{
+    margin-top: 25px;
+    width: 500px;
+    height: 330px;
+    float: left;
+    background: #fff;
+    margin: 10px;
+    border-radius: 2px; 
+    border-style: solid; 
+    border-color: black ;
+}
+.history h1
+{
+    margin-top: 10px;
+    font-size: 330%;
+    background-color: white !important; 
+    text-decoration: none;
+    margin-left: 20 px;
+    text-align: center;
+    color: black;
+}
+.history h4
+{
+    margin-top: 10px;
+    font-size: 150%;
+    background-color: white !important; 
+    text-decoration: none;
+    margin-left: 0;
+    text-align: center;
+    color: black;
+}
+.history h6
+{
+    font-size: 100%;
+    background-color: white !important; 
+    text-decoration: none;
+    margin-left: 25px;
+    text-align: left;
+    color: black;
+}
 .container 
 {
     max-width: 500 !important; 
@@ -35,7 +153,7 @@ img
     float: left; 
     margin-top: 10px; 
 }
-.acive h4
+.active h4
 {
     font-size: 20px; 
     margin-left: 10px; 
@@ -46,7 +164,7 @@ img
     font-size: 10px; 
     margin-left: 10px; 
     line-height: 2px; 
-    color: #fff;
+    color: #fff; 
 }
 .chat-page
 {

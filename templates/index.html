@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habitat</title>
+    <link href={{url_for('static', filename='/styles/style.css' )}} rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+<body>
+    <div id='banner' class="container-fluid">
+        <div class="row">
+            <div id='name' class="col-1 py-4">Habitat</div>
+            <a id='habitat-name' class="col-10 py-3">Habitat Name</a>
+            <div id='user-name' class="col-1 py-4">{{user.username}}</div>
+        </div>
+    </div> 
+    <br>
+    <div class="stream">
+        <div class="postHeaderImg">
+            <img src="{{url_for('static', filename = 'images/default_image.png')}}">
+        </div>
+        <div class="titleOfPost">
+            <h4>&nbsp After coding every day for the past month, I finished my first game!</h4>
+            <h6>&nbsp&nbsp&nbsp Programming &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp DerekGeng15 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 6 hours ago </h6>
+        </div>
+        <br>
+        <br>
+        <div class="postHeaderImg">
+            <a id='link' href='http://127.0.0.1:5000/Meditation/posts/0'>
+            <img src="{{url_for('static', filename = 'images/default_image.png')}}">
+            </a>
+        </div>
+        <div class="titleOfPost">
+            <h4>&nbsp Finally got my license as a certified yoga teacher!</h4>
+            <h6>&nbsp&nbsp&nbsp Yoga &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp JordanBartol &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 2 days ago </h6>
+        </div>
+        <br>
+        <br>
+        <div class="postHeaderImg">
+            <img src="{{url_for('static', filename = 'images/default_image.png')}}">
+        </div>
+        <div class="titleOfPost">
+            <h4>&nbsp I'm 6 months drink-free. Never thought this day would come</h4>
+            <h6>&nbsp&nbsp&nbsp Battling Addiction &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp PradKama &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 3 days ago </h6>
+        </div>
+        <br>
+        <br>
+        <div class="postHeaderImg">
+            <img src="{{url_for('static', filename = 'images/default_image.png')}}">
+        </div>
+        <div class="titleOfPost">
+            <h4>&nbsp Just got my 1 year badge for programming :D </h4>
+            <h6>&nbsp&nbsp&nbsp Programming &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp AravinJoBal &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 3 days ago </h6>
+        </div>
+        <br>
+        <br>
+        <div class="postHeaderImg">
+            <img src="{{url_for('static', filename = 'images/default_image.png')}}">
+        </div>
+        <div class="titleOfPost">
+            <h4>&nbsp 3 months vegan! My skin cleared up so much. </h4>
+            <h6>&nbsp&nbsp&nbsp Veganism &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp BartDolla &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 4 days ago </h6>
+        </div>
+    </div>
+    <div class="recs">
+        <h1>Recommendations</h1>
+        <h4>Recommended Sphere: Meditation</h4>
+        <h6>Based on your interests in: Yoga, Fasting</h6>
+        <br>
+        <h4>Recommended Sphere: Basketball</h4>
+        <h6>Based on your interests in: Tennis, Running, Marathons</h6>
+    </div>
+
+    <div class="history">
+        <h1>Your Spheres</h1>
+        <h4>Programming</h4>
+        <br>
+        <h4>Tennis</h4>
+        <br>
+        <h4>Knitting</h4>
+        <br>
+        <h4>Fasting</h4>
+        <br>
+
+    </div>
+
+    <script type='text/javascript'>var habitat = '{{habitat}}'
+        document.getElementById('link').href = 'http://127.0.0.1:5000/Meditation/posts/0'
+    </script>
+    <script type="text/javascript" src="{{url_for('static', filename = 'scripts/habitat.js')}}"></script>
+    <script type="text/javascript" src="{{url_for('static', filename = 'scripts/community.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

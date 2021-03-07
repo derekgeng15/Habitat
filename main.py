@@ -193,7 +193,7 @@ def login():
 @app.route('/users/<user>')
 def user(user):
     if User.query.filter_by(username=user).first():
-        return render_template('user.html', user=user)
+        return render_template('index.html', user=user)
     else:
         return 'no'
 @app.route('/<name>')
