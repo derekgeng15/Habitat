@@ -15,7 +15,7 @@
         <div class="row">
             <div id='name'class="col-1">Habitat</div>
             <div id='habitat-name' class="col-10">Habitat Name</div>
-            <div id='user-name' class="col-1">username</div>
+            <div id='user-name' class="col-1">{{user.username}}</div>
         </div>
     </div>
     
@@ -27,16 +27,20 @@
             <button type='button' class ='btn'>Group Achievments</button>
         </div> 
         <div id='post-container' class="container">
-            <div id='post-title'class="col">Title</div>
+            <div class="row justify-content-center">
+                <div id=author class="col-1 pt-4">Name</div>
+                <div id='post-title' class="col-9">Title</div>
+                <div class="col-1 pt-4">Time</div>
+            </div>
             <div id='post-body' class="col">body</div>
 
         </div>
     </div>
-    <script type="text/javascript" src="{{url_for('static', filename = 'scripts/habitat.js')}}"></script>
     <script type="text/javascript">
         var habitat = '{{habitat}}'
         var postID = '{{postID}}'
     </script>
+    <script type="text/javascript" src="{{url_for('static', filename = 'scripts/habitat.js')}}"></script>
     <script type="text/javascript" src="{{url_for('static', filename = 'scripts/post.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </body>

@@ -189,7 +189,10 @@ img
     text-align: center;
 }
 #tabs{
-    margin-left: 15px;
+    background-color: white;
+}
+#form{
+    padding-left: 25px;
 }
 #posts{
     /* background-color: white; */
@@ -215,7 +218,7 @@ img
     text-align: center;
     color: black;
 }
-#post-button{
+#post-btn{
     margin-top: 10px;
     margin-left: 30px;
     background-color: rgb(43, 238, 25);

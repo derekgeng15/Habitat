@@ -21,27 +21,34 @@
     </div>
 
     <div id='page' class='container-fluid'>
-        <div id="tabs">
+        <div id="tabs" class= 'container'>
             <button id='community-btn' type='button' class='btn'>Community Posts</button>
             <button type='button' class='btn'>Discussion Board</button>
             <button type='button' class='btn'>Shared Calendar</button>
             <button type='button' class='btn'>Group Achievments</button>
         </div>
-        <div class="row">
-            <div id='posts' class="col-md-9"></div>
-            <div id='sidebar' class='col-md-2'>
-                <div class="row">
-                    <button id='post-btn' type='button' class='btn col-8'>Add Post</button>
+        <div id='form' class="container">
+            <form>
+                <div class="form-group text-center">
+                    <label for="new-post-title">Post Title</label>
+                    <input type="text" class="form-control my-3 border border-dark" id="title-input" placeholder="title">
+                    <label for="new-post-title">Post Content</label>
+                    <textarea type="text" class="form-control my-3 border border-dark" id="content-input" placeholder="content" rows='5'></textarea>
                 </div>
-            </div>
-        </div>
+                <div class="row">
+                    <button type='button' id='submit-btn' class='btn-primary mx-1'>Post</button>
+                </div>
+            </form>    
+        </div>      
     </div>
-    <script type='text/javascript'>var habitat = '{{habitat}}'</script>
+    <script type='text/javascript'>
+        var habitat = '{{habitat}}'
+        var userID = parseInt('{{user.id}}')
+    </script>
     <script type="text/javascript" src="{{url_for('static', filename = 'scripts/habitat.js')}}"></script>
-    <script type="text/javascript" src="{{url_for('static', filename = 'scripts/community.js')}}"></script>
+    <script type="text/javascript" src="{{url_for('static', filename = 'scripts/newpost.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
         crossorigin="anonymous"></script>
 </body>
-
 </html>

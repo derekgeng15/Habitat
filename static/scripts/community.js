@@ -1,7 +1,7 @@
 async function loadPosts(){
     response = await data
-    for(i = 0; i < response.posts.length; i++){
-        title = response.posts[0].title
+    for(i =  response.posts.length - 1; i >= 0; i--){
+        title = response.posts[i].title
         posts = document.getElementById('posts')
         post = document.createElement('div')
         post.className += 'post row'
@@ -11,6 +11,7 @@ async function loadPosts(){
         ptitle.appendChild(document.createTextNode(title))
         post.appendChild(ptitle)
         posts.appendChild(post)
+        document.getElementById('post-btn').onclick = function(){window.location = BASE + habitat + '/newpost'}
     }
 }
 loadPosts()
