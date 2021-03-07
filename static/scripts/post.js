@@ -6,7 +6,7 @@ function loadPost(){
     .then(function(data){
         document.getElementById('post-title').innerHTML = data.posts[parseInt(postID)].title
         document.getElementById('post-body').innerHTML = data.posts[parseInt(postID)].content
-
+        console.log(parseInt(data.posts[parseInt(postID)].user.substring(5)))
     }) 
     .catch(function(error){
         console.log(error)

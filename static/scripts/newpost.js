@@ -1,6 +1,7 @@
 
 document.getElementById('submit-btn').onclick =
     function(){
+        console.log(userID)
         fetch(BASE + 'database/' + habitat + '/posts',{
             method: 'PUT',
             headers: {
@@ -8,7 +9,8 @@ document.getElementById('submit-btn').onclick =
             },
             body : JSON.stringify({
                 'title': document.getElementById('title-input').value,
-                'content': document.getElementById('content-input').value
+                'content': document.getElementById('content-input').value,
+                'userID': userID
             })
         })
         .then(resp => resp.json())
