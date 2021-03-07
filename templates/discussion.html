@@ -44,8 +44,8 @@
         </div>
         <div class="chat-page"> 
             <div class="msg-inbox">
-                 <div class="chats">
-                     <div class="msg-page">
+                 <div  class="chats">
+                     <div id='msg-page'class="msg-page">
                          <div class="received-chats"> 
                          <div class="received-chats-img">
                              <img src="{{url_for('static', filename = 'images/pfp.jpg')}}">
@@ -107,7 +107,7 @@
                          <br>
                     <div class="received-chats"> 
                         <div class="received-chats-img">
-                            <img src="{{url_for('static', filename = 'images/pfp.jpg')}}">
+                            <img id = 'pfpimg' src="{{url_for('static', filename = 'images/pfp.jpg')}}">
                         </div>
                            <div class="received-msg">
                                <div class="received-msg-inbox">
@@ -116,10 +116,9 @@
                                </div>
                            </div>
                         </div>
-
                     </div>
                     </div>
-
+                    
                  </div>
             </div>
 
@@ -131,16 +130,23 @@
                 <i class = "fa fa-smile-o"></i>
             </div> -->
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="write message...">
+                <input type="text" class="form-control" id='msg-input' placeholder="write message...">
                     <div class="input-group-append">
                         <span class="input-group-text"> 
                             <i class = "fa fa-paper-plane"></i>
                         </span>
                     </div>
-
+            
             </div>
         </div>
     </div>
+    <script type='text/javascript'>
+        var habitat = '{{habitat}}'
+        var username = '{{user.username}}'
+        var imgurl = "{{url_for('static', filename = 'images/pfp.jpg')}}"
+        </script>
+    <script type="text/javascript" src="{{url_for('static', filename = 'scripts/habitat.js')}}"></script>
+    <script type="text/javascript" src="{{url_for('static', filename = 'scripts/discussion.js')}}"></script>
 </body>
 
 </html>

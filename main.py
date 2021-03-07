@@ -15,6 +15,7 @@ login_manager.init_app(app)
 class Habitat(db.Model):
     name = db.Column(db.Text, primary_key=True)
     users = db.Column(db.Integer, nullable=False)
+    description = db.Coiumn(db.Integer, nullable=False)
     posts = db.relationship('Post', backref='habitat', lazy=True)
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -41,6 +42,10 @@ post_parser = reqparse.RequestParser()
 post_parser.add_argument('title', type=str, required=True)
 post_parser.add_argument('content', type=str, required=True)
 
+habitat_parser = reqparse.RequestParser()
+habitat_parser.add_argument('description', type=str, required=True)
+habitat_parser.add_argument('users', type=str, required=True)
+
 newpost_parser = reqparse.RequestParser()
 newpost_parser.add_argument('title', type=str, required=True)
 newpost_parser.add_argument('content', type=str, required=True)
@@ -66,7 +71,8 @@ habitat_fields = {
     'id' : fields.Integer,
     'name': fields.String,
     'users': fields.Integer,
-    'posts' : fields.Nested(post_fields)
+    'posts' : fields.Nested(post_fields),
+    'description' : fields.String
 }
 
 user_fields = {
@@ -82,6 +88,7 @@ class DataBase(Resource):
     @marshal_with(habitat_fields)
     def get(self, h):
         result = Habitat.query.filter_by(name=h).first()
+        
         if not result:
             abort(404, message='habitat does not exist')
         return result
@@ -197,7 +204,9 @@ def habitat(name):
 
 @app.route('/<name>/discussion')
 def discussion(name):
-    return render_template('discussion.html', habitat=name)
+    if not current_user.is_authenticated:
+        return redirect(url_for('login'))
+    return render_template('discussion.html', habitat=name, user=current_user)
 
 @app.route('/<name>/posts/<post>')
 def post(name, post):
