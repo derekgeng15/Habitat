@@ -1,20 +1,23 @@
+
 #banner{
     padding: 20px;
-    background-color: #cbc8d1;
+    background-color: greenyellow;
 }
 #habitat-name{
     font-size: 200%;
     text-align: center;
+    text-decoration: none;
+    color: black;
 }
 #user-name{
     text-align: center;
 }
-#tabs{
-    text-align: center; 
-
-}
 #page{
     padding: 10px 10px;
+    background-color: white;
+}
+#tabs{
+    margin-left: 15px;
 }
 #posts{
     /* background-color: white; */
@@ -35,6 +38,7 @@
     background-color: white !important; 
     text-decoration: none;
     text-align: center;
+    color: black;
 }
 #post-button{
     margin-top: 10px;
@@ -46,9 +50,24 @@
     margin-left: 30px;
     border: 1px solid black !important;
 }
+#post-container{
+    padding: 20px !important;
+}
+#post-title{
+    padding: 20px;
+    margin : 10px !important;
+    border: 1px solid black !important;
+    background-color: #fff;
+}
+#post-body{
+    border: 1px solid black !important;
+    padding: 10px;
+    background-color: #fff;
+    text-align: left;
+}
 [class*='col']{
     padding: lrem;
-    background-color: #cbc8d1;
+    background-color: greenyellow;
     border: 0px solid #fff;
     /* color: #fff; */
     text-align: center;
@@ -56,7 +75,7 @@
 [class*='con']{
     border: 0px !important;
     padding: lrem;
-    background-color: #8f8a9b;
+    background-color: greenyellow;
     border: 1px solid #fff;
     /* color: #fff; */
 }
