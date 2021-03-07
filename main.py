@@ -99,7 +99,9 @@ api.add_resource(HabitatDB, '/database/<string:h>/<string:t>')
 @app.route('/<name>')
 def habitat(name):
     return render_template('habitat.html', habitat=name)
-
+@app.route('/discussion')
+def discussion():
+    return render_template('discussion.html', habitat='test')
 @app.route('/<name>/posts/<post>')
 def post(name, post):
     return render_template('post.html', habitat=name, postID=post)
