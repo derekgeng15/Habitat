@@ -9,5 +9,6 @@ const setHabitat = async() =>{
     document.getElementById('habitat-name').innerHTML = response.name
     document.getElementById('habitat-name').href = BASE + habitat
     document.getElementById('community-btn').onclick = function(){window.location = BASE + habitat}
+    document.getElementById('dis-btn').onclick = function(){window.location = BASE + habitat + '/discussion'}
 }
 setHabitat()

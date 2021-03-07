@@ -15,7 +15,7 @@ login_manager.init_app(app)
 class Habitat(db.Model):
     name = db.Column(db.Text, primary_key=True)
     users = db.Column(db.Integer, nullable=False)
-    description = db.Coiumn(db.Integer, nullable=False)
+    description = db.Column(db.Integer, nullable=False)
     posts = db.relationship('Post', backref='habitat', lazy=True)
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -88,17 +88,17 @@ class DataBase(Resource):
     @marshal_with(habitat_fields)
     def get(self, h):
         result = Habitat.query.filter_by(name=h).first()
-        
         if not result:
             abort(404, message='habitat does not exist')
         return result
 
     @marshal_with(habitat_fields)
     def post(self, h):
+        args = habitat_parser.parse_args()
         result = Habitat.query.filter_by(name=h).first()
         if result:
             abort(409, message='habitat already exists')
-        result = Habitat(name=h, users=0)
+        result = Habitat(name=h,  description=args['description'], users=args['users'].count(',') + 1)
         db.session.add(result)
         db.session.commit()
         return result

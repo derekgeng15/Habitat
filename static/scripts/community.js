@@ -12,6 +12,7 @@ async function loadPosts(){
         post.appendChild(ptitle)
         posts.appendChild(post)
         document.getElementById('post-btn').onclick = function(){window.location = BASE + habitat + '/newpost'}
+        document.getElementById('users').innerHTML = 'Users: ' + response.users
     }
 }
 loadPosts()

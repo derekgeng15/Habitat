@@ -1,3 +1,4 @@
+
 .container 
 {
     max-width: 500 !important; 
@@ -45,7 +46,7 @@ img
     font-size: 10px; 
     margin-left: 10px; 
     line-height: 2px; 
-    color: #fff; 1
+    color: #fff;
 }
 .chat-page
 {

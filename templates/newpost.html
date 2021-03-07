@@ -14,16 +14,16 @@
 <body>
     <div id='banner' class="container-fluid">
         <div class="row">
-            <div id='name' class="col-1">Habitat</div>
-            <a id='habitat-name' class="col-10">Habitat Name</a>
-            <div id='user-name' class="col-1">{{user.username}}</div>
+            <div id='name' class="col-1 py-4">Habitat</div>
+            <a id='habitat-name' class="col-10 py-3">Habitat Name</a>
+            <a href='http://127.0.0.1:5000/users/{{user.username}}' id='user-name' class="col-1 py-4">{{user.username}}</a>
         </div>
-    </div>
+    </div> 
 
     <div id='page' class='container-fluid'>
         <div id="tabs" class= 'container'>
             <button id='community-btn' type='button' class='btn'>Community Posts</button>
-            <button type='button' class='btn'>Discussion Board</button>
+            <button id='dis-btn' type='button' class='btn'>Discussion Board</button>
             <button type='button' class='btn'>Shared Calendar</button>
             <button type='button' class='btn'>Group Achievments</button>
         </div>

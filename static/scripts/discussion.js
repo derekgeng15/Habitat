@@ -12,6 +12,7 @@ function(event){
         p.appendChild(document.createTextNode(messageNode.value))
         msgInbox.appendChild(p)
         time = document.createElement('span')
+        time.className += 'time'
         time.innerHTML = '&nbsp You &nbsp &nbsp' + (new Date()).getHours() + ':' + (new Date()).getMinutes() + ' Today'
         msgInbox.appendChild(time)
         msg.appendChild(msgInbox)
@@ -28,8 +29,16 @@ function(event){
         chat.appendChild(con)
         document.getElementById('msg-page').appendChild(chat)
         messageNode.value = ""
+
     }
 })
+
+async function set(){
+    response = await data
+    document.getElementById('chat-title').innerHTML = '&nbsp' + username
+
+}
+set()
 
 {/*  <div class="sent-chats"> 
             <div class="sent-msg">

@@ -13,23 +13,23 @@
 <body>
     <div id='banner' class="container-fluid">
         <div class="row">
-            <div id='name'class="col-1">Habitat</div>
-            <div id='habitat-name' class="col-10">Habitat Name</div>
-            <div id='user-name' class="col-1">{{user.username}}</div>
+            <div id='name'class="col-1 py-4">Habitat</div>
+            <div id='habitat-name' class="col-10 py-3">Habitat Name</div>
+            <div id='user-name' class="col-1 py-4">{{user.username}}</div>
         </div>
     </div>
     
     <div id='page' class='container-fluid'>
         <div id="tabs">
             <button id = 'community-btn' type='button' class ='btn'>Community Posts</button>
-            <button type='button' class ='btn'>Discussion Board</button>
+            <button id='dis-btn' type='button' class ='btn'>Discussion Board</button>
             <button type='button' class ='btn'>Shared Calendar</button>
             <button type='button' class ='btn'>Group Achievments</button>
         </div> 
         <div id='post-container' class="container">
             <div class="row justify-content-center">
                 <div id=author class="col-1 pt-4">Name</div>
-                <div id='post-title' class="col-9">Title</div>
+                <div id='post-title' class="col-9" script='font-size:200%'>Title</div>
                 <div class="col-1 pt-4">Time</div>
             </div>
             <div id='post-body' class="col">body</div>
