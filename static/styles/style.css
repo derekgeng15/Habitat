@@ -17,11 +17,17 @@
     background-color: white;
 }
 #tabs{
-    margin-left: 15px;
+    background-color: white;
+}
+#form{
+    padding-left: 25px;
 }
 #posts{
     /* background-color: white; */
     margin-left: 35px;
+    border: 1px solid black !important;
+}
+#title-input{
     border: 1px solid black !important;
 }
 .post{
@@ -40,7 +46,7 @@
     text-align: center;
     color: black;
 }
-#post-button{
+#post-btn{
     margin-top: 10px;
     margin-left: 30px;
     background-color: rgb(43, 238, 25);
@@ -66,7 +72,6 @@
     text-align: left;
 }
 [class*='col']{
-    padding: lrem;
     background-color: greenyellow;
     border: 0px solid #fff;
     /* color: #fff; */
@@ -74,8 +79,7 @@
 }
 [class*='con']{
     border: 0px !important;
-    padding: lrem;
-    background-color: greenyellow;
+    background-color: white;
     border: 1px solid #fff;
     /* color: #fff; */
 }

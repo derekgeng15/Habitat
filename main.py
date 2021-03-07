@@ -12,8 +12,6 @@ class Habitat(db.Model):
     name = db.Column(db.Text, primary_key=True)
     users = db.Column(db.Integer, nullable=False)
     posts = db.relationship('Post', backref='habitat', lazy=True)
-    # def __repr__(self):
-    #     return f'"name":{self.name}, "users":{self.users}, "posts":{self.posts}'
 
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -21,11 +19,20 @@ class Post(db.Model):
     content = db.Column(db.Text, nullable=False)
     habitat_name = db.Column(db.Text, db.ForeignKey('habitat.name'), nullable=False)
 
+class User(db.Model):
+    username = db.Column(db.String(20), primary_key=True)
+    password = db.Column(db.Text, nullable=False)
+
 if not path.exists('./database.db'):
     db.create_all()
+
 post_parser = reqparse.RequestParser()
 post_parser.add_argument('title', type=str, required=True)
 post_parser.add_argument('content', type=str, required=True)
+
+login_parser = reqparse.RequestParser()
+login_parser.add_argument('title', type=str, required=True)
+login_parser.add_argument('content', type=str, required=True)
 
 post_fields = {
     'title' : fields.String,
@@ -76,7 +83,9 @@ class HabitatDB(Resource):
         if t == 'users':
             result.users += 1
         if t == 'posts':
-            args = post_parser.parse_args()   
+            args = post_parser.parse_args()  
+            print(args['title'])
+            print(args['content']) 
             post = Post(id=len(Post.query.all()), title=args['title'], content=args['content'], habitat_name=h)
             db.session.add(post)
         db.session.commit()
@@ -104,5 +113,8 @@ def habitat(name):
 def post(name, post):
     return render_template('post.html', habitat=name, postID=post)
 
+@app.route('/<name>/newpost')
+def newpost(name):
+    return render_template('newpost.html', habitat=name)
 if __name__ == '__main__':
     app.run(debug=True)

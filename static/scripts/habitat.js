@@ -8,5 +8,6 @@ const setHabitat = async() =>{
     const response = await data
     document.getElementById('habitat-name').innerHTML = response.name
     document.getElementById('habitat-name').href = BASE + habitat
+    document.getElementById('community-btn').onclick = function(){window.location = BASE + habitat}
 }
 setHabitat()
